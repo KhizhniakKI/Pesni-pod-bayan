@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Песни</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      color: #333;
+      margin: 0;
+      padding: 0 15px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    h1 {
+      margin: 40px 0 20px;
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #2c3e50;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 900px;
+    }
+    nav button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(52,152,219,0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      flex: 1 1 150px;
+      max-width: 200px;
+      user-select: none;
+    }
+    nav button:hover:not(.active) {
+      background-color: #2980b9;
+      box-shadow: 0 6px 8px rgba(41,128,185,0.6);
+    }
+    nav button.active {
+      background-color: #2c3e50;
+      box-shadow: 0 6px 12px rgba(44,62,80,0.8);
+    }
+    section {
+      background: white;
+      border-radius: 15px;
+      padding: 25px 35px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+      max-width: 900px;
+      width: 100%;
+      display: none;
+      animation: fadeIn 0.6s ease forwards;
+    }
+    section.active {
+      display: block;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-top: 0;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 8px;
+      color: #34495e;
+      margin-bottom: 25px;
+    }
+    .song {
+      font-size: 1.15rem;
+      margin-bottom: 14px;
+      padding-left: 10px;
+      border-left: 4px solid #3498db;
+      color: #2c3e50;
+      user-select: text;
+      transition: background-color 0.3s ease;
+    }
+    .song:hover {
+      background-color: #eaf4fc;
+      border-color: #2980b9;
+      cursor: pointer;
+    }
+    .song a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      padding: 5px 0;
+    }
+    .song a:hover {
+      text-decoration: underline;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Адаптивность */
+    @media (max-width: 480px) {
+      nav button {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      body {
+        padding: 0 10px 30px;
+      }
+      section {
+        padding: 20px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Песни</h1>
+
+  <nav>
+    <button class="tab-btn" data-tab="cat1">Классика</button>
+    <button class="tab-btn" data-tab="cat2">Народные</button>
+    <button class="tab-btn" data-tab="cat3">Военные</button>
+  </nav>
+
+  <section id="cat1">
+    <h2>Классика</h2>
+    <div class="song"><a href="songs/a_na_tom_beregu_nezabudki.html">А на том берегу незабудки цветут</a></div>
+    <div class="song"><a href="songs/alliluay.html">Аллилуйя</a></div>
+    <div class="song"><a href="songs/Ay.html">Ау</a></div>
+    <div class="song"><a href="songs/belorussiya.html">Белоруссия</a></div>
+    <div class="song"><a href="songs/belye_rosy.html">Белые розы</a></div>
+    <div class="song"><a href="songs/Berezov.html">Березовый сок</a></div>
+    <div class="song"><a href="songs/vologda.html">Вологда</a></div>
+    <div class="song"><a href="songs/Pulya.html">Вот пуля просвистела</a></div>
+    <div class="song"><a href="songs/Tolko_mig.html">Есть только миг</a></div>
+    <div class="song"><a href="songs/Pesnya_bez_bayana.html">Какая песня без баяна</a></div>
+    <div class="song"><a href="songs/kon.html">Конь</a></div>
+    <div class="song"><a href="songs/lizaveta.html">Лизавета</a></div>
+    <div class="song"><a href="songs/mama_milaya.html">Мама милая мама</a></div>
+    <div class="song"><a href="songs/napoi_marusya.html">Напои Маруся коня</a></div>
+    <div class="song"><a href="songs/ne_jaley.html">Не жалею не зову не плачу</a></div>
+    <div class="song"><a href="songs/Oy_ty_Galay.html">Ой ты Галю</a></div>
+    <div class="song"><a href="songs/ot_chego_beryozy.html">От чего так в России берёзы</a></div>
+    <div class="song"><a href="songs/pesnya_neulovimykh_mstiteley.html">Песня неуловимых мстителей</a></div>
+    <div class="song"><a href="songs/podmoskovnye_vechera.html">Подмосковные вечера</a></div>
+    <div class="song"><a href="songs/Pod_oknom_shirokim.html">Под окном широким</a></div>
+    <div class="song"><a href="songs/poslednyaya_elektrichka.html">Последняя электричка</a></div>
+    <div class="song"><a href="songs/svadba.html">Свадьба</a></div>
+    <div class="song"><a href="songs/sedaya_noch.html">Седая ночь</a></div>
+    <div class="song"><a href="songs/Sinya_vechnost.html">Синяя вечность</a></div>
+    <div class="song"><a href="songs/slava_Bogu.html">Слава Богу за все</a></div>
+    <div class="song"><a href="songs/staryy_klen.html">Старый клен</a></div>
+    <div class="song"><a href="songs/topolay.html">Тополя</a></div>
+    <div class="song"><a href="songs/horovodit.html">Холодная весна</a></div>
+    <div class="song"><a href="songs/ekh_dorogi.html">Эх, дороги</a></div>
+    <div class="song"><a href="songs/Ya_tebya.html">Я тебя никогда не забуду</a></div>
+  </section>
+
+  <section id="cat2">
+    <h2>Народные</h2>
+    <div class="song"><a href="songs/vyun_nad_vodoy.html">Вьюн над водой</a></div>
+    <div class="song"><a href="songs/derevnya_moya.html">Деревня моя</a></div>
+    <div class="song"><a href="songs/kak_u_nashego_soseda.html">Как у нашего соседа</a></div>
+    <div class="song"><a href="songs/lyubo_brattsy_lyubo.html">Любо, братцы, любо</a></div>
+    <div class="song"><a href="songs/mesyats_na_nebe.html">Месяц на небе</a></div>
+    <div class="song"><a href="songs/ne_dlya_menya.html">Не для меня придет весна</a></div>
+    <div class="song"><a href="songs/odinokaya_garmon.html">Одинокая гармонь</a></div>
+    <div class="song"><a href="songs/oy_pri_luzhku.html">Ой при лужку</a></div>
+    <div class="song"><a href="songs/ojsya_ty_ojsya.html">Ойся ты ойся</a></div>
+    <div class="song"><a href="songs/to_ne_vecher.html">Ой, то не вечер</a></div>
+    <div class="song"><a href="songs/orenburgskiy_platok.html">Оренбургский пуховый платок</a></div>
+    <div class="song"><a href="songs/ot_lyudey_na_derevne.html">От людей на деревне не спрятаться</a></div>
+    <div class="song"><a href="songs/pozovi_menya_tikho.html">Позови меня тихо по имени</a></div>
+    <div class="song"><a href="songs/spyat_kurgany_temnye.html">Спят курганы темные</a></div>
+    <div class="song"><a href="songs/to_ne_veter.html">То не ветер ветку клонит</a></div>
+  </section>
+
+  <section id="cat3">
+    <h2>Военные</h2>
+    <div class="song"><a href="songs/a_zakaty_alye.html">А закаты алые</a></div>
+    <div class="song"><a href="songs/vecher_na_reyde.html">Вечер на рейде</a></div>
+    <div class="song"><a href="songs/Davno_my_doma.html">Давно мы дома не были</a></div>
+    <div class="song"><a href="songs/den_pobedy.html">День Победы</a></div>
+    <div class="song"><a href="songs/desyatyy_batalyon.html">Десятый наш десантный батальон</a></div>
+    <div class="song"><a href="songs/katyusha.html">Катюша</a></div>
+    <div class="song"><a href="songs/kogda_my_byli.html">Когда мы были на войне</a></div>
+    <div class="song"><a href="songs/krasnye_maki.html">Красные маки</a></div>
+    <div class="song"><a href="songs/na_bezymyannoy_vysote.html">На безымянной высоте</a></div>
+    <div class="song"><a href="songs/ogonyok.html">Огонёк</a></div>
+    <div class="song"><a href="songs/smuglyanka.html">Смуглянка</a></div>
+    <div class="song"><a href="songs/tyomnaya_noch.html">Тёмная ночь</a></div>
+    <div class="song"><a href="songs/tuchi_v_golubom.html">Тучи в голубом</a></div>
+  </section>
+
+<script>
+  const buttons = document.querySelectorAll('.tab-btn');
+  const sections = document.querySelectorAll('section');
+
+  // Восстановление выбранной вкладки при загрузке
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedTab = localStorage.getItem('selectedTab') || 'cat1';
+    document.querySelector(`.tab-btn[data-tab="${savedTab}"]`)?.classList.add('active');
+    document.getElementById(savedTab)?.classList.add('active');
+  });
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tab = btn.getAttribute('data-tab');
+
+      // Сохраняем текущую вкладку
+      localStorage.setItem('selectedTab', tab);
+
+      // Обновляем классы активных кнопок и секций
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      sections.forEach(s => {
+        s.classList.toggle('active', s.id === tab);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
