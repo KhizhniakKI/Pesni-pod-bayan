@@ -176,3 +176,7 @@ pre {
   font-family: 'Roboto', monospace;
   color: #4b3832;
 }
+body {
+  transform: scale(0.75);
+  transform-origin: top left;
+}
